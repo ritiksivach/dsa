@@ -8,11 +8,11 @@ void printArray(int *A, int n)
     }
     printf("\n");
 }
-// void swap(int* a,int *b){
-//     int temp=*a;
-//     *a=*b;
-//     *b=temp;
-// }
+void swap(int* a,int *b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+}
 void bubbleSort(int *A, int n)
 {
     int temp,isSorted=0;
@@ -26,9 +26,7 @@ void bubbleSort(int *A, int n)
                 {
                     // swap(A[j],A[k]);
                     isSorted=0;
-                    int temp = A[j];
-                    A[j]= A[j+1];
-                    A[j+1]= temp;
+                    swap(A+j,A+j+1);//elements of array sent by using the concept of 'array as a pointer' and swaping them
                 }
         }
         if(isSorted){
@@ -38,8 +36,8 @@ void bubbleSort(int *A, int n)
 }
 int main()
 {
-    int A[] = {2, 3, 4, 8, 7};
-    int n = 5;
+    int A[] = {2,3,4,8,7};
+    int n = sizeof(A)/sizeof(A[0]);
     printArray(A, n);
     bubbleSort(A, n);
     printArray(A, n);
