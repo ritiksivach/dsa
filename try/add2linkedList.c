@@ -7,7 +7,6 @@ struct node {
 void getvalue(struct node * ptr){
     printf("enter data for a node");
     scanf("%d",&ptr->data);
-    printf("entered value%d",ptr->data);
     ptr->next=NULL;
 }
     
