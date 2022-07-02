@@ -6,7 +6,7 @@ struct node
     int data;
     struct node *next;
 };
-void llt(struct node *ptr)
+void linkedListTraverse(struct node *ptr)
 {
     while (ptr != NULL)
     {
@@ -74,9 +74,9 @@ int main()
     printf("%d\n",isFull());
     top = push(top, 7);
     top = push(top, 71);
-    llt(top);
+    linkedListTraverse(top);
     printf("element poped is:%d\n", pop(&top));
-    llt(top);
+    linkedListTraverse(top);
     printf("%d\n",isEmpty(top));
     printf("%d\n",isFull());
 }

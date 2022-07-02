@@ -13,7 +13,7 @@ int partition(int A[], int low, int high)
     int start = low + 1;
     int end = high;
     int temp;
-    do
+    while (start < end)
     {
         while (A[start] <= pivot)
         {
@@ -29,7 +29,7 @@ int partition(int A[], int low, int high)
             A[start] = A[end];
             A[end] = temp;
         }
-    } while (start < end);
+    } 
 
     temp = A[end];
     A[end] = A[low];
@@ -47,7 +47,7 @@ void quickSort(int A[], int low, int high)
 }
 int main()
 {
-    int A[] = {8, 2, 9, 15, 4};
+    int A[] = {8,7,4,5,1};
 
     int n = sizeof(A)/sizeof(int);
     printArray(A, n);
